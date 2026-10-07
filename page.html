@@ -1,0 +1,429 @@
+<html lang="es"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Portafolio de Proyectos TI · PMO-DTI</title>
+  
+<script>
+(function () {
+  var guardado = localStorage.getItem('pmo-tema');
+  if (guardado === 'claro' || guardado === 'oscuro') {
+    document.documentElement.setAttribute('data-theme', guardado === 'oscuro' ? 'dark' : 'light');
+  }
+})();
+function pmoAlternarTema() {
+  var raiz = document.documentElement;
+  var oscuroDelSistema = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var actual = raiz.getAttribute('data-theme') || (oscuroDelSistema ? 'dark' : 'light');
+  var nuevo = actual === 'dark' ? 'light' : 'dark';
+  raiz.setAttribute('data-theme', nuevo);
+  localStorage.setItem('pmo-tema', nuevo === 'dark' ? 'oscuro' : 'claro');
+}
+</script>
+  <link rel="stylesheet" href="../styles/pmo.css">
+</head>
+<body>
+
+
+
+
+
+<div class="barra">
+  <div class="barra-interior">
+    <div class="barra-fila">
+      <span class="barra-marca">PMO-DTI · Portafolio de Proyectos TI</span>
+      <span class="barra-derecha">
+        
+        <span class="barra-quien">erick.fernandez@sag.gob.cl · Editor</span>
+        
+        <button type="button" class="barra-tema" onclick="pmoAlternarTema()" aria-label="Cambiar entre modo claro y oscuro" title="Cambiar entre modo claro y oscuro">◐</button>
+      </span>
+    </div>
+    <nav class="barra-menu">
+      <a href="/" class="activo">Portafolio</a>
+      <a href="../pages/seguimiento.html">Seguimiento</a>
+      <a href="../pages/contratos.html">Contratos</a>
+      
+      
+      <a href="../pages/mi-dedicacion.html">Mi dedicación</a>
+      
+      
+      
+      
+    </nav>
+  </div>
+</div>
+<main class="contenedor">
+
+
+  <div style="display:flex; justify-content:space-between; align-items:flex-start; gap:16px; flex-wrap:wrap">
+    <div>
+      <h1>Portafolio de Proyectos TI — DTI SAG</h1>
+      <p class="subtitulo">
+        Piloto. Datos al 06-10-2026, cargados desde las planillas de seguimiento.
+      </p>
+    </div>
+    
+    <a href="../pages/nuevo.html"><button type="button">Nuevo proyecto</button></a>
+    
+  </div>
+
+  <div class="kpis">
+    <div class="kpi">
+      <div class="valor">3</div>
+      <div class="etiqueta">Proyectos filtrados</div>
+    </div>
+    <div class="kpi">
+      <div class="valor">100%</div>
+      <div class="etiqueta">Con duración representable</div>
+    </div>
+    <div class="kpi">
+      <div class="valor">3</div>
+      <div class="etiqueta">Con fecha de inicio declarada</div>
+    </div>
+    <div class="kpi">
+      <div class="valor">0</div>
+      <div class="etiqueta">Sin ninguna fecha</div>
+    </div>
+    
+  </div>
+
+  <div class="aviso">
+    <strong>Cómo leer esta carta.</strong>
+    De 3 proyectos, solo <strong>3</strong> tienen
+    fecha de inicio declarada por su coordinador. Otros 0 se dibujan con el
+    inicio <em>deducido del contrato asociado</em>, que no es lo mismo que la fecha en que empezó el
+    trabajo. 0 tienen únicamente fecha de término y aparecen como un rombo,
+    sin barra, porque su duración se desconoce. 0 no son representables.
+    La carta muestra el <strong>100%</strong> del portafolio como barra:
+    no es un plan completo.
+  </div>
+
+  
+  <p class="nota" style="margin:0 0 12px">
+    Estás viendo solo los proyectos que <strong>coordinas</strong>.
+    <a href="/?filtros=1">Ver el portafolio completo</a>.
+  </p>
+  
+
+  <form class="filtros" method="get" action="/">
+    
+    <input type="hidden" name="filtros" value="1">
+    <div class="campo">
+      <label for="categoria">Categoría</label>
+      <select name="categoria" id="categoria">
+        <option value="">Todas</option>
+        
+        <option value="1. Proyectos en ejecución y de arrastre">1. Proyectos en ejecución y de arrastre</option>
+        
+        <option value="2. Proyectos nuevos priorizados 2026">2. Proyectos nuevos priorizados 2026</option>
+        
+        <option value="3. Líneas de mejora continua (células de desarrollo)">3. Líneas de mejora continua (células de desarrollo)</option>
+        
+        <option value="4. Otros / fuera de lista oficial">4. Otros / fuera de lista oficial</option>
+        
+      </select>
+    </div>
+    <div class="campo">
+      <label for="salud">Salud</label>
+      <select name="salud" id="salud">
+        <option value="">Todas</option>
+        
+        <option value="Amarillo">Amarillo</option>
+        
+        <option value="Rojo">Rojo</option>
+        
+        <option value="Sin datos">Sin datos</option>
+        
+        <option value="Verde">Verde</option>
+        
+      </select>
+    </div>
+    <div class="campo">
+      <label for="coordinador">Coordinador</label>
+      <select name="coordinador" id="coordinador">
+        <option value="">Todos</option>
+        
+        <option value="Anderson Perdomo">Anderson Perdomo</option>
+        
+        <option value="Erick Fernández" selected>Erick Fernández</option>
+        
+        <option value="Guido Venegas">Guido Venegas</option>
+        
+        <option value="Juan Matamala">Juan Matamala</option>
+        
+        <option value="Luis Rincón">Luis Rincón</option>
+        
+        <option value="Marianella Díaz">Marianella Díaz</option>
+        
+        <option value="María Paz Vivallo">María Paz Vivallo</option>
+        
+        <option value="Myriam Bahamondes">Myriam Bahamondes</option>
+        
+        <option value="Raúl Fuentes">Raúl Fuentes</option>
+        
+        <option value="Rodrigo Montes">Rodrigo Montes</option>
+        
+        <option value="Susana Ossandón">Susana Ossandón</option>
+        
+        <option value="Teresa Gardilcic">Teresa Gardilcic</option>
+        
+        <option value="Victoria Sosa">Victoria Sosa</option>
+        
+      </select>
+    </div>
+    <div class="campo">
+      <label for="tag">Tag</label>
+      <select name="tag" id="tag">
+        <option value="">Todos</option>
+        
+        <option value="Prioridad DN">Prioridad DN</option>
+        
+      </select>
+    </div>
+    <button type="submit">Filtrar</button>
+    <a href="/?filtros=1"><button type="button">Limpiar</button></a>
+  </form>
+
+  <div class="tarjeta">
+    <div class="leyenda">
+      <span class="par">
+        <svg width="30" height="14" aria-hidden="true"><rect x="0" y="3" width="30" height="9" rx="4" fill="var(--tinta-2)" /></svg>
+        Barra sólida: inicio y término declarados
+      </span>
+      <span class="par">
+        <svg width="30" height="14" aria-hidden="true"><rect x="0.75" y="3" width="28.5" height="9" rx="4" fill="var(--tinta-2)" fill-opacity="0.26" stroke="var(--tinta-2)" stroke-width="1.5" stroke-dasharray="4 3" /></svg>
+        Barra punteada: inicio deducido del contrato
+      </span>
+      <span class="par">
+        <svg width="18" height="14" aria-hidden="true"><polygon points="9,2 15,7 9,12 3,7" fill="var(--superficie)" stroke="var(--tinta-2)" stroke-width="2" /></svg>
+        Rombo: solo fecha de término, duración desconocida
+      </span>
+      <span class="par">El color indica la salud del proyecto; el detalle textual está en la tabla.</span>
+    </div>
+
+    
+    <div class="svg-envoltura">
+    <svg width="1140" height="228" viewBox="0 0 1140 228" role="img" aria-label="Carta Gantt del portafolio de proyectos">
+
+      
+      <line x1="383.6" y1="56" x2="383.6" y2="218" stroke="var(--rejilla)" stroke-width="1" />
+      
+      
+      <text x="383.6" y="32" text-anchor="middle" font-size="11" fill="var(--tinta-apagada)">T2</text>
+      
+      
+      <text x="383.6" y="16" text-anchor="middle" font-size="11" font-weight="600" fill="var(--tinta-2)">2026</text>
+      
+      
+      <line x1="476.4" y1="56" x2="476.4" y2="218" stroke="var(--rejilla)" stroke-width="1" />
+      
+      
+      <text x="476.4" y="32" text-anchor="middle" font-size="11" fill="var(--tinta-apagada)">T3</text>
+      
+      
+      
+      <line x1="570.3" y1="56" x2="570.3" y2="218" stroke="var(--rejilla)" stroke-width="1" />
+      
+      
+      <text x="570.3" y="32" text-anchor="middle" font-size="11" fill="var(--tinta-apagada)">T4</text>
+      
+      
+      
+      <line x1="664.1" y1="56" x2="664.1" y2="218" stroke="var(--rejilla)" stroke-width="1" />
+      
+      
+      <text x="664.1" y="32" text-anchor="middle" font-size="11" fill="var(--tinta-apagada)">T1</text>
+      
+      
+      <text x="664.1" y="16" text-anchor="middle" font-size="11" font-weight="600" fill="var(--tinta-2)">2027</text>
+      
+      
+      <line x1="755.9" y1="56" x2="755.9" y2="218" stroke="var(--rejilla)" stroke-width="1" />
+      
+      
+      <text x="755.9" y="32" text-anchor="middle" font-size="11" fill="var(--tinta-apagada)">T2</text>
+      
+      
+      
+      <line x1="848.7" y1="56" x2="848.7" y2="218" stroke="var(--rejilla)" stroke-width="1" />
+      
+      
+      <text x="848.7" y="32" text-anchor="middle" font-size="11" fill="var(--tinta-apagada)">T3</text>
+      
+      
+      
+      <line x1="942.5" y1="56" x2="942.5" y2="218" stroke="var(--rejilla)" stroke-width="1" />
+      
+      
+      <text x="942.5" y="32" text-anchor="middle" font-size="11" fill="var(--tinta-apagada)">T4</text>
+      
+      
+      
+      <line x1="1036.4" y1="56" x2="1036.4" y2="218" stroke="var(--rejilla)" stroke-width="1" />
+      
+      
+      <text x="1036.4" y="32" text-anchor="middle" font-size="11" fill="var(--tinta-apagada)">T1</text>
+      
+      
+      <text x="1036.4" y="16" text-anchor="middle" font-size="11" font-weight="600" fill="var(--tinta-2)">2028</text>
+      
+      
+
+      <line x1="575.4" y1="52" x2="575.4" y2="218" stroke="var(--tinta-2)" stroke-width="1.5" stroke-dasharray="3 3" />
+      <text x="575.4" y="48" text-anchor="middle" font-size="10.5" font-weight="600" fill="var(--tinta-2)">hoy</text>
+
+      
+        
+      <text x="0" y="82" font-size="11.5" font-weight="600" fill="var(--tinta-2)">1. Proyectos en ejecución y de arrastre</text>
+        
+      
+        
+      <g>
+        <rect class="fila-fondo" x="0" y="89" width="1140" height="30" />
+        <title>Sistema Contact Center Atención Usuaria — salud Amarillo. Declarado por el coordinador. Coordina Erick Fernández.</title>
+        <a href="../pages/16.html">
+          <text x="0" y="109.3" font-size="12" fill="var(--tinta)">
+            SIAC
+          </text>
+        </a>
+          
+          
+        <rect x="322.4" y="92" width="310.0" height="24" rx="4" class="salud-relleno-amarillo" />
+          
+        
+        
+      </g>
+        
+      
+        
+      <g>
+        <rect class="fila-fondo" x="0" y="121" width="1140" height="30" />
+        <title>Nuevo Sistema de Certificación Zoosanitaria de Exportación (ECZE) — salud Verde. Declarado por el coordinador. Coordina Erick Fernández.</title>
+        <a href="../pages/3.html">
+          <text x="0" y="141.3" font-size="12" fill="var(--tinta)">
+            SICZE
+          </text>
+        </a>
+          
+          
+        <rect x="364.3" y="124" width="733.3" height="24" rx="4" class="salud-relleno-verde" />
+          
+        
+        
+      </g>
+        
+      
+        
+      <text x="0" y="176" font-size="11.5" font-weight="600" fill="var(--tinta-2)">2. Proyectos nuevos priorizados 2026</text>
+        
+      
+        
+      <g>
+        <rect class="fila-fondo" x="0" y="183" width="1140" height="30" />
+        <title>Actualización Tecnológica Drupal 9 a Drupal 11 para el Sitio Web SAG — salud Verde. Declarado por el coordinador. Coordina Erick Fernández.</title>
+        <a href="../pages/74.html">
+          <text x="0" y="203.3" font-size="12" fill="var(--tinta)">
+            Drupal 11 Web SAG
+          </text>
+        </a>
+          
+          
+        <rect x="595.8" y="186" width="72.4" height="24" rx="4" class="salud-relleno-verde" />
+          
+        
+        
+      </g>
+        
+      
+    </svg>
+    </div>
+    
+  </div>
+
+  
+
+  
+  
+
+  
+  
+
+  <div class="tarjeta">
+    <details>
+      <summary>Ver los 3 proyectos como tabla</summary>
+      <table>
+        <thead>
+          <tr><th>Proyecto</th><th>Salud</th><th>Percepción</th><th>Estado</th><th>Coordinador</th>
+              <th>Tags</th><th>Inicio</th><th>Término</th><th>Origen del inicio</th></tr>
+        </thead>
+        <tbody>
+        
+          <tr>
+            <td><a href="../pages/3.html">Nuevo Sistema de Certificación Zoosanitaria de Exportación (ECZE)</a> <span style="color:var(--tinta-2); font-size:12px">(SICZE)</span></td>
+            
+            <td><span class="chip"><span class="punto punto-verde"></span>Verde</span></td>
+            <td>
+              
+              <span class="chip"><span class="punto punto-verde"></span>Verde (hace 1d)</span>
+              
+            </td>
+            <td>En ejecución</td>
+            <td>Erick Fernández</td>
+            
+            <td>—</td>
+            <td>2026-03-13</td>
+            <td>2028-03-01</td>
+            <td>Declarado por el coordinador</td>
+          </tr>
+        
+          <tr>
+            <td><a href="../pages/16.html">Sistema Contact Center Atención Usuaria</a> <span style="color:var(--tinta-2); font-size:12px">(SIAC)</span></td>
+            
+            <td><span class="chip"><span class="punto punto-amarillo"></span>Amarillo</span></td>
+            <td>
+              
+              <span class="chip"><span class="punto punto-verde"></span>Verde (hace 1d)</span>
+              
+            </td>
+            <td>En ejecución</td>
+            <td>Erick Fernández</td>
+            
+            <td>—</td>
+            <td>2026-01-31</td>
+            <td>2026-12-01</td>
+            <td>Declarado por el coordinador</td>
+          </tr>
+        
+          <tr>
+            <td><a href="../pages/74.html">Actualización Tecnológica Drupal 9 a Drupal 11 para el Sitio Web SAG</a> <span style="color:var(--tinta-2); font-size:12px">(Drupal 11 Web SAG)</span></td>
+            
+            <td><span class="chip"><span class="punto punto-verde"></span>Verde</span></td>
+            <td>
+              
+              <span style="color:var(--tinta-2); font-size:12px">sin reportar</span>
+              
+            </td>
+            <td>En ejecución</td>
+            <td>Erick Fernández</td>
+            
+            <td>—</td>
+            <td>2026-10-26</td>
+            <td>2027-01-05</td>
+            <td>Declarado por el coordinador</td>
+          </tr>
+        
+        </tbody>
+      </table>
+    </details>
+  </div>
+
+
+</main>
+
+
+
+<a class="boton-sugerir" href="../pages/nueva.html" title="Sugerir una mejora de PMO-DTI">✎ Sugerir mejora</a>
+
+
+
+</body></html>

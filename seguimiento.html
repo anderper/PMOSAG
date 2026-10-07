@@ -1,0 +1,168 @@
+<html lang="es"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Seguimiento semanal · PMO-DTI</title>
+  
+<script>
+(function () {
+  var guardado = localStorage.getItem('pmo-tema');
+  if (guardado === 'claro' || guardado === 'oscuro') {
+    document.documentElement.setAttribute('data-theme', guardado === 'oscuro' ? 'dark' : 'light');
+  }
+})();
+function pmoAlternarTema() {
+  var raiz = document.documentElement;
+  var oscuroDelSistema = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var actual = raiz.getAttribute('data-theme') || (oscuroDelSistema ? 'dark' : 'light');
+  var nuevo = actual === 'dark' ? 'light' : 'dark';
+  raiz.setAttribute('data-theme', nuevo);
+  localStorage.setItem('pmo-tema', nuevo === 'dark' ? 'oscuro' : 'claro');
+}
+</script>
+  <link rel="stylesheet" href="../styles/pmo.css">
+</head>
+<body class="pantalla-cumplimiento">
+
+
+
+
+
+<div class="barra">
+  <div class="barra-interior">
+    <div class="barra-fila">
+      <span class="barra-marca">PMO-DTI · Portafolio de Proyectos TI</span>
+      <span class="barra-derecha">
+        
+        <span class="barra-quien">erick.fernandez@sag.gob.cl · Editor</span>
+        
+        <button type="button" class="barra-tema" onclick="pmoAlternarTema()" aria-label="Cambiar entre modo claro y oscuro" title="Cambiar entre modo claro y oscuro">◐</button>
+      </span>
+    </div>
+    <nav class="barra-menu">
+      <a href="/">Portafolio</a>
+      <a href="../pages/seguimiento.html" class="activo">Seguimiento</a>
+      <a href="../pages/contratos.html">Contratos</a>
+      
+      
+      <a href="../pages/mi-dedicacion.html">Mi dedicación</a>
+      
+      
+      
+      
+    </nav>
+  </div>
+</div>
+<main class="contenedor">
+
+<h1>Seguimiento semanal</h1>
+<p class="nota">
+  Semana del <strong>2026-10-05</strong> —
+  en curso, cierra el viernes.
+</p>
+
+
+<p class="nota" style="margin:0 0 12px">
+  Estás viendo solo los proyectos que <strong>coordinas</strong>.
+  <a href="../pages/seguimiento.html">Ver todos</a>.
+</p>
+
+
+<p class="nota" style="margin:0 0 12px">
+  
+  <a href="../pages/seguimiento.html">← Semana anterior</a> ·
+  <a href="../pages/seguimiento.html">Semana siguiente →</a>
+</p>
+
+<form class="filtros" method="get" action="/seguimiento">
+  
+  <input type="hidden" name="filtros" value="1">
+  <div class="campo">
+    <label for="semana">Semana</label>
+    <input type="date" id="semana" name="semana" value="2026-10-05">
+  </div>
+  <button type="submit">Ver</button>
+</form>
+
+<div class="tarjeta">
+  <div class="tabla-envoltura" tabindex="0" role="region" aria-label="Cumplimiento semanal, tabla desplazable">
+    <table>
+      <thead><tr>
+        <th>Proyecto</th><th>Coordinador</th><th>Estado</th>
+        <th>Semáforo</th><th class="num">Avance</th><th>Último reporte</th>
+      </tr></thead>
+      <tbody>
+      
+        <tr>
+          <td><a href="../pages/74.html">Actualización Tecnológica Drupal 9 a Drupal 11 para el Sitio Web SAG</a></td>
+          <td>Erick Fernández</td>
+          
+          <td><span class="chip"><span class="punto punto-amarillo"></span>Pendiente</span></td>
+          <td>—</td>
+          <td class="num">
+            —
+            
+          </td>
+          <td>
+            
+            —
+          </td>
+        </tr>
+      
+        <tr>
+          <td><a href="../pages/3.html">Nuevo Sistema de Certificación Zoosanitaria de Exportación (ECZE)</a></td>
+          <td>Erick Fernández</td>
+          
+          <td><span class="chip"><span class="punto punto-verde"></span>Reportado</span></td>
+          <td>Verde</td>
+          <td class="num">
+            0.0%
+            
+          </td>
+          <td>
+            
+            
+            Se mantiene seguimiento de las entregas pendientes del proveedor relacionadas con Hito 2, verificando su cumplimiento para avanzar con el proceso de pago y la obtención de los vistos buenos y firmas correspondientes. En paralelo, continúan los refinamientos asociados al Hito 3 y las validaciones QA de las funcionalidades desarrolladas, con el objetivo de confirmar su correcta implementación y dejar registradas las observaciones pendientes, en caso de existir.
+            <div class="nota">05-10-2026 11:31</div>
+            
+          </td>
+        </tr>
+      
+        <tr>
+          <td><a href="../pages/16.html">Sistema Contact Center Atención Usuaria</a></td>
+          <td>Erick Fernández</td>
+          
+          <td><span class="chip"><span class="punto punto-verde"></span>Reportado</span></td>
+          <td>Verde</td>
+          <td class="num">
+            0.0%
+            
+          </td>
+          <td>
+            
+            
+            Por parte del proveedor se realizaron ajustes en la arquitectura, cuyo resultado permitió liberar y recuperar los casos que se encontraban en cola correspondientes a los meses de agosto y septiembre.
+
+Se envió un correo solicitando las gestiones necesarias para abordar los casos pendientes y coordinar un plan progresivo de recuperación y regularización de la información.
+
+En paralelo, se están realizando sesiones de trabajo con los equipos involucrados para revisar, confirmar, refinar y priorizar los requerimientos asociados a las HU, orientados a implementar mejoras en el formulario.
+
+Asimismo, se han desarrollado reuniones de revisión para validar y confirmar los ajustes propuestos, avanzando en la definición de los requerimientos que serán incorporados en las próximas entregas.
+            <div class="nota">05-10-2026 11:19</div>
+            
+          </td>
+        </tr>
+      
+      </tbody>
+    </table>
+  </div>
+</div>
+
+</main>
+
+
+
+<a class="boton-sugerir" href="../pages/nueva.html" title="Sugerir una mejora de PMO-DTI">✎ Sugerir mejora</a>
+
+
+
+</body></html>

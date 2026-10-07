@@ -1,0 +1,145 @@
+<html lang="es"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Mi dedicación · PMO-DTI</title>
+  
+<script>
+(function () {
+  var guardado = localStorage.getItem('pmo-tema');
+  if (guardado === 'claro' || guardado === 'oscuro') {
+    document.documentElement.setAttribute('data-theme', guardado === 'oscuro' ? 'dark' : 'light');
+  }
+})();
+function pmoAlternarTema() {
+  var raiz = document.documentElement;
+  var oscuroDelSistema = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var actual = raiz.getAttribute('data-theme') || (oscuroDelSistema ? 'dark' : 'light');
+  var nuevo = actual === 'dark' ? 'light' : 'dark';
+  raiz.setAttribute('data-theme', nuevo);
+  localStorage.setItem('pmo-tema', nuevo === 'dark' ? 'oscuro' : 'claro');
+}
+</script>
+  <link rel="stylesheet" href="../styles/pmo.css">
+</head>
+<body class="pantalla-mi-dedicacion">
+
+
+
+
+
+<div class="barra">
+  <div class="barra-interior">
+    <div class="barra-fila">
+      <span class="barra-marca">PMO-DTI · Portafolio de Proyectos TI</span>
+      <span class="barra-derecha">
+        
+        <span class="barra-quien">erick.fernandez@sag.gob.cl · Editor</span>
+        
+        <button type="button" class="barra-tema" onclick="pmoAlternarTema()" aria-label="Cambiar entre modo claro y oscuro" title="Cambiar entre modo claro y oscuro">◐</button>
+      </span>
+    </div>
+    <nav class="barra-menu">
+      <a href="/">Portafolio</a>
+      <a href="../pages/seguimiento.html">Seguimiento</a>
+      <a href="../pages/contratos.html">Contratos</a>
+      
+      
+      <a href="../pages/mi-dedicacion.html" class="activo">Mi dedicación</a>
+      
+      
+      
+      
+    </nav>
+  </div>
+</div>
+<main class="contenedor">
+
+<h1>Mi dedicación</h1>
+
+
+
+
+<p class="nota">
+  Ajusta cuánto dedicas realmente a cada proyecto. Solo el porcentaje: quién
+  compone el equipo lo decide el coordinador. Cada cambio queda en el historial
+  del proyecto.
+</p>
+
+<form method="post" action="/mi-dedicacion">
+  <div class="tarjeta">
+    <table>
+      <thead>
+        <tr><th>Proyecto</th><th>Rol</th><th class="num">% dedicación</th></tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <td>
+            <a href="../pages/74.html">Actualización Tecnológica Drupal 9 a Drupal 11 para el Sitio Web SAG</a>
+            
+          </td>
+          <td>Coordinador</td>
+          <td class="num">
+            <input type="hidden" name="asignacion_id" value="112">
+            <input type="number" name="pct" min="0" max="100" step="0.5" style="width:6.5em" aria-label="Porcentaje de dedicación a Actualización Tecnológica Drupal 9 a Drupal 11 para el Sitio Web SAG" value="20">
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            <a href="../pages/3.html">Nuevo Sistema de Certificación Zoosanitaria de Exportación (ECZE)</a>
+            
+          </td>
+          <td>Coordinador</td>
+          <td class="num">
+            <input type="hidden" name="asignacion_id" value="3">
+            <input type="number" name="pct" min="0" max="100" step="0.5" style="width:6.5em" aria-label="Porcentaje de dedicación a Nuevo Sistema de Certificación Zoosanitaria de Exportación (ECZE)" value="60">
+          </td>
+        </tr>
+        
+        <tr>
+          <td>
+            <a href="../pages/16.html">Sistema Contact Center Atención Usuaria</a>
+            
+          </td>
+          <td>Coordinador</td>
+          <td class="num">
+            <input type="hidden" name="asignacion_id" value="16">
+            <input type="number" name="pct" min="0" max="100" step="0.5" style="width:6.5em" aria-label="Porcentaje de dedicación a Sistema Contact Center Atención Usuaria" value="40">
+          </td>
+        </tr>
+        
+      </tbody>
+    </table>
+
+    <p class="excedido" style="margin:14px 0 0">
+      Total dedicado: <strong>120%</strong>
+      
+      — estás <strong>sobre el 100%</strong> de tu jornada.
+      
+    </p>
+    
+    <p class="nota" style="margin:6px 0 0">
+      No se bloquea: si de verdad estás sobrecargado, el portafolio necesita
+      saberlo. Queda visible para tu jefatura en la vista de capacidad.
+    </p>
+    
+  </div>
+
+  
+
+  <div class="tarjeta">
+    <button type="submit">Guardar</button>
+  </div>
+</form>
+
+
+</main>
+
+
+
+<a class="boton-sugerir" href="../pages/nueva.html" title="Sugerir una mejora de PMO-DTI">✎ Sugerir mejora</a>
+
+
+
+</body></html>

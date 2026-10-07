@@ -1,0 +1,83 @@
+<html lang="es"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Buscar contratos · PMO-DTI</title>
+  
+<script>
+(function () {
+  var guardado = localStorage.getItem('pmo-tema');
+  if (guardado === 'claro' || guardado === 'oscuro') {
+    document.documentElement.setAttribute('data-theme', guardado === 'oscuro' ? 'dark' : 'light');
+  }
+})();
+function pmoAlternarTema() {
+  var raiz = document.documentElement;
+  var oscuroDelSistema = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var actual = raiz.getAttribute('data-theme') || (oscuroDelSistema ? 'dark' : 'light');
+  var nuevo = actual === 'dark' ? 'light' : 'dark';
+  raiz.setAttribute('data-theme', nuevo);
+  localStorage.setItem('pmo-tema', nuevo === 'dark' ? 'oscuro' : 'claro');
+}
+</script>
+  <link rel="stylesheet" href="../styles/pmo.css">
+</head>
+<body class="pantalla-contratos">
+
+
+
+
+
+<div class="barra">
+  <div class="barra-interior">
+    <div class="barra-fila">
+      <span class="barra-marca">PMO-DTI · Portafolio de Proyectos TI</span>
+      <span class="barra-derecha">
+        
+        <span class="barra-quien">erick.fernandez@sag.gob.cl · Editor</span>
+        
+        <button type="button" class="barra-tema" onclick="pmoAlternarTema()" aria-label="Cambiar entre modo claro y oscuro" title="Cambiar entre modo claro y oscuro">◐</button>
+      </span>
+    </div>
+    <nav class="barra-menu">
+      <a href="/">Portafolio</a>
+      <a href="../pages/seguimiento.html">Seguimiento</a>
+      <a href="../pages/contratos.html" class="activo">Contratos</a>
+      
+      
+      <a href="../pages/mi-dedicacion.html">Mi dedicación</a>
+      
+      
+      
+      
+    </nav>
+  </div>
+</div>
+<main class="contenedor">
+
+  <h1>Buscar contratos</h1>
+  <p class="nota" style="margin:0 0 18px">
+    Busca por orden de compra, expediente, solicitud de compra, resolución, proveedor, RUT,
+    nombre del contrato o nombre del proyecto. Da igual cómo venga escrito el número:
+    <span class="mono">612-1153-SE24</span>, <span class="mono">612 1153 SE24</span> y
+    <span class="mono">6121153se24</span> encuentran lo mismo.
+  </p>
+
+  <div class="tarjeta">
+    <form method="get" action="/contratos" class="buscador">
+      <input type="search" name="q" value="" autofocus placeholder="25517/2024 · 612-1153-SE24 · USERCODE · Sancionatorio">
+      <button type="submit">Buscar</button>
+    </form>
+    
+  </div>
+
+  
+
+</main>
+
+
+
+<a class="boton-sugerir" href="../pages/nueva.html" title="Sugerir una mejora de PMO-DTI">✎ Sugerir mejora</a>
+
+
+
+</body></html>

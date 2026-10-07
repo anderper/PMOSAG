@@ -1,0 +1,307 @@
+<html lang="es"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Editar · Actualización Tecnológica Drupal 9 a Drupal 11 para el Sitio Web SAG · PMO-DTI</title>
+  
+<script>
+(function () {
+  var guardado = localStorage.getItem('pmo-tema');
+  if (guardado === 'claro' || guardado === 'oscuro') {
+    document.documentElement.setAttribute('data-theme', guardado === 'oscuro' ? 'dark' : 'light');
+  }
+})();
+function pmoAlternarTema() {
+  var raiz = document.documentElement;
+  var oscuroDelSistema = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var actual = raiz.getAttribute('data-theme') || (oscuroDelSistema ? 'dark' : 'light');
+  var nuevo = actual === 'dark' ? 'light' : 'dark';
+  raiz.setAttribute('data-theme', nuevo);
+  localStorage.setItem('pmo-tema', nuevo === 'dark' ? 'oscuro' : 'claro');
+}
+</script>
+  <link rel="stylesheet" href="./styles/pmo.css">
+</head>
+<body class="pantalla-editar-proyecto">
+
+
+
+
+
+<div class="barra">
+  <div class="barra-interior">
+    <div class="barra-fila">
+      <span class="barra-marca">PMO-DTI · Portafolio de Proyectos TI</span>
+      <span class="barra-derecha">
+        
+        <span class="barra-quien">erick.fernandez@sag.gob.cl · Editor</span>
+        
+        <button type="button" class="barra-tema" onclick="pmoAlternarTema()" aria-label="Cambiar entre modo claro y oscuro" title="Cambiar entre modo claro y oscuro">◐</button>
+      </span>
+    </div>
+    <nav class="barra-menu">
+      <a href="/">Portafolio</a>
+      <a href="./pages/seguimiento.html">Seguimiento</a>
+      <a href="./pages/contratos.html">Contratos</a>
+      
+      
+      <a href="./pages/mi-dedicacion.html">Mi dedicación</a>
+      
+      
+      
+      
+    </nav>
+  </div>
+</div>
+<main class="contenedor">
+
+  
+  
+  
+<header class="enc-proyecto">
+  <div class="enc-identidad">
+    <h1 class="enc-nombre">Actualización Tecnológica Drupal 9 a Drupal 11 para el Sitio Web SAG</h1>
+    
+    <div class="enc-meta"><strong>Editando</strong> · Drupal 11 Web SAG · Categoria.NUEVOS</div>
+    <p class="enc-proposito">Modernizar y asegurar la continuidad operativa del sitio web institucional del SAG mediante la actualización tecnológica desde Drupal 9 a Drupal 11, mejorando la seguridad, rendimiento, experiencia de usuario, administración de contenidos y cumplimiento de los lineamientos de Gobierno Digital</p>
+    
+    
+  </div>
+  <div class="enc-hechos">
+    <div>
+      <div class="hecho-valor"><span class="chip"><span class="punto punto-sin-datos"></span></span></div>
+      <div class="hecho-etiqueta">Salud</div>
+    </div>
+    
+    <div>
+      
+      
+      <div class="hecho-valor" title="Corrimiento del término respecto de la línea base: comprometido 2027-01-05, vigente 2027-01-05.">
+        0 d
+      </div>
+      <div class="hecho-etiqueta">
+        Desviación
+      </div>
+    </div>
+    <div>
+      <div class="hecho-valor">—</div>
+      <div class="hecho-etiqueta">Término vigente</div>
+    </div>
+    <div>
+      
+      <div class="hecho-valor" style="font-family:var(--sans);font-size:14px">— sin asignar —</div>
+      <div class="hecho-etiqueta">Coordina</div>
+    </div>
+  </div>
+</header>
+
+  <p class="nota" style="margin:0 0 10px">
+    <a href="./pages/74.html">Ficha</a> ·
+    <a href="./pages/historial.html">Historial de cambios</a> ·
+    Editando como <strong>erick.fernandez@sag.gob.cl</strong>. Cada cambio queda registrado
+    con tu nombre, la fecha y el valor anterior.
+  </p>
+
+  
+    
+    
+    
+    
+  
+
+  
+  <nav class="pestanas" aria-label="Secciones de edición">
+    
+    <a class="pestana" href="./pages/editar.html">
+      Datos
+    </a>
+    
+    <a class="pestana" href="./pages/editar.html">
+      Equipo
+    </a>
+    
+    <a class="pestana" href="./pages/editar.html" aria-current="page">
+      Hitos
+    </a>
+    
+    <a class="pestana" href="./pages/editar.html">
+      Etapas y tareas
+    </a>
+    
+    <a class="pestana" href="./pages/editar.html">
+      Contratos
+    </a>
+    
+  </nav>
+
+  
+
+
+
+
+
+
+
+
+
+<section class="panel" id="panel-hitos">
+<div class="tarjeta">
+  <h2>Hitos de avance</h2>
+  <p class="nota" style="margin:0 0 14px">
+    Un hito es un compromiso con fecha, sin duración: se dibuja como rombo en la carta Gantt.
+    Es distinto de una tarea, que es desglose de ejecución. La fecha la escribes tú y no se
+    recalcula desde las tareas — un compromiso no debe moverse solo porque el desglose se movió.
+    Un hito sin fecha planificada se guarda igual, pero no se dibuja.
+  </p>
+
+  
+  <p class="nota" style="margin:0 0 14px">Este proyecto todavía no tiene hitos de avance.</p>
+  
+
+  <details class="edicion-fila" open>
+    <summary>Agregar hito</summary>
+    <form method="post" action="/proyecto/74/hito">
+      <div class="campo">
+        <label for="hito-nuevo-nombre">Nombre del hito</label>
+        <input type="text" id="hito-nuevo-nombre" name="nombre" required>
+      </div>
+      <div class="campo">
+        <label for="hito-nuevo-tipo">Tipo</label>
+        <select id="hito-nuevo-tipo" name="tipo">
+          
+          <option value="Entregable">Entregable</option>
+          
+          <option value="Gate">Gate</option>
+          
+          <option value="Paso a producción">Paso a producción</option>
+          
+          <option value="Normativo">Normativo</option>
+          
+          <option value="Otro">Otro</option>
+          
+        </select>
+      </div>
+      <div class="campo">
+        <label for="hito-nuevo-plan">Fecha planificada</label>
+        <input type="date" id="hito-nuevo-plan" name="fecha_plan">
+      </div>
+      <div class="campo">
+        <label for="hito-nuevo-estado">Estado</label>
+        <select id="hito-nuevo-estado" name="estado">
+          
+          <option value="Pendiente">Pendiente</option>
+          
+          <option value="En curso">En curso</option>
+          
+          <option value="Cumplido">Cumplido</option>
+          
+          <option value="Atrasado">Atrasado</option>
+          
+          <option value="Cancelado">Cancelado</option>
+          
+        </select>
+      </div>
+      <div class="campo">
+        <label for="hito-nuevo-responsable">Responsable</label>
+        <select id="hito-nuevo-responsable" name="responsable_id">
+          <option value="">Sin responsable</option>
+          
+          <option value="4">Anderson Perdomo</option>
+          
+          <option value="26">Brayan Elgueta</option>
+          
+          <option value="22">Carlos Salvo</option>
+          
+          <option value="15">Claudio Ulloa</option>
+          
+          <option value="25">Daniel Morales</option>
+          
+          <option value="30">Dummy</option>
+          
+          <option value="21">Elvis Brevi</option>
+          
+          <option value="3">Erick Fernández</option>
+          
+          <option value="17">Fernando Aguilera</option>
+          
+          <option value="31">Fernando Felipe Cavieres Vásquez</option>
+          
+          <option value="28">Francisco Pizarro</option>
+          
+          <option value="8">Guido Venegas</option>
+          
+          <option value="29">José Delgado</option>
+          
+          <option value="7">Juan Matamala</option>
+          
+          <option value="19">Juan Valenzuela</option>
+          
+          <option value="1">Luis Rincón</option>
+          
+          <option value="14">Luis Urrea</option>
+          
+          <option value="32">Marcela Paz Sanhueza Otaegui</option>
+          
+          <option value="13">Marianella Díaz</option>
+          
+          <option value="12">María Paz Vivallo</option>
+          
+          <option value="16">Miguel Antúnez</option>
+          
+          <option value="2">Myriam Bahamondes</option>
+          
+          <option value="27">Oscar Zuchel</option>
+          
+          <option value="18">Pablo Olmedo</option>
+          
+          <option value="10">Raúl Fuentes</option>
+          
+          <option value="33">Rita María Sagredo Urra</option>
+          
+          <option value="23">Rodrigo Guajardo</option>
+          
+          <option value="9">Rodrigo Montes</option>
+          
+          <option value="20">Sebastian Jara</option>
+          
+          <option value="24">Sebastian Lopez</option>
+          
+          <option value="5">Susana Ossandón</option>
+          
+          <option value="11">Teresa Gardilcic</option>
+          
+          <option value="6">Victoria Sosa</option>
+          
+        </select>
+      </div>
+      <label><input type="checkbox" name="critico" value="1"> Crítico</label>
+      <div class="campo">
+        <label for="hito-nuevo-obs">Observación</label>
+        <input type="text" id="hito-nuevo-obs" name="observacion">
+      </div>
+      <button type="submit">Agregar hito</button>
+    </form>
+  </details>
+</div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+
+
+
+<a class="boton-sugerir" href="./pages/nueva.html" title="Sugerir una mejora de PMO-DTI">✎ Sugerir mejora</a>
+
+<script src="./scripts/pestanas.js" defer></script>
+
+</body></html>

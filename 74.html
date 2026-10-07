@@ -1,0 +1,217 @@
+<html lang="es"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Actualización Tecnológica Drupal 9 a Drupal 11 para el Sitio Web SAG · PMO-DTI</title>
+  
+<script>
+(function () {
+  var guardado = localStorage.getItem('pmo-tema');
+  if (guardado === 'claro' || guardado === 'oscuro') {
+    document.documentElement.setAttribute('data-theme', guardado === 'oscuro' ? 'dark' : 'light');
+  }
+})();
+function pmoAlternarTema() {
+  var raiz = document.documentElement;
+  var oscuroDelSistema = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var actual = raiz.getAttribute('data-theme') || (oscuroDelSistema ? 'dark' : 'light');
+  var nuevo = actual === 'dark' ? 'light' : 'dark';
+  raiz.setAttribute('data-theme', nuevo);
+  localStorage.setItem('pmo-tema', nuevo === 'dark' ? 'oscuro' : 'claro');
+}
+</script>
+  <link rel="stylesheet" href="../styles/pmo.css">
+</head>
+<body class="pantalla-ficha">
+
+
+
+
+
+<div class="barra">
+  <div class="barra-interior">
+    <div class="barra-fila">
+      <span class="barra-marca">PMO-DTI · Portafolio de Proyectos TI</span>
+      <span class="barra-derecha">
+        
+        <span class="barra-quien">erick.fernandez@sag.gob.cl · Editor</span>
+        
+        <button type="button" class="barra-tema" onclick="pmoAlternarTema()" aria-label="Cambiar entre modo claro y oscuro" title="Cambiar entre modo claro y oscuro">◐</button>
+      </span>
+    </div>
+    <nav class="barra-menu">
+      <a href="/">Portafolio</a>
+      <a href="../pages/seguimiento.html">Seguimiento</a>
+      <a href="../pages/contratos.html">Contratos</a>
+      
+      
+      <a href="../pages/mi-dedicacion.html">Mi dedicación</a>
+      
+      
+      
+      
+    </nav>
+  </div>
+</div>
+<main class="contenedor">
+
+  
+  
+  
+<header class="enc-proyecto">
+  <div class="enc-identidad">
+    <h1 class="enc-nombre">Actualización Tecnológica Drupal 9 a Drupal 11 para el Sitio Web SAG</h1>
+    
+    <div class="enc-meta">Drupal 11 Web SAG · 2. Proyectos nuevos priorizados 2026</div>
+    <p class="enc-proposito">Modernizar y asegurar la continuidad operativa del sitio web institucional del SAG mediante la actualización tecnológica desde Drupal 9 a Drupal 11, mejorando la seguridad, rendimiento, experiencia de usuario, administración de contenidos y cumplimiento de los lineamientos de Gobierno Digital</p>
+    
+    
+  </div>
+  <div class="enc-hechos">
+    <div>
+      <div class="hecho-valor"><span class="chip"><span class="punto punto-verde"></span>Verde</span></div>
+      <div class="hecho-etiqueta">Salud</div>
+    </div>
+    
+    <div>
+      
+      
+      <div class="hecho-valor" title="Corrimiento del término respecto de la línea base: comprometido 2027-01-05, vigente 2027-01-05.">
+        0 d
+      </div>
+      <div class="hecho-etiqueta">
+        Desviación
+      </div>
+    </div>
+    <div>
+      <div class="hecho-valor">2027-01-05</div>
+      <div class="hecho-etiqueta">Término vigente</div>
+    </div>
+    <div>
+      
+      <div class="hecho-valor" style="font-family:var(--sans);font-size:14px">Erick Fernández</div>
+      <div class="hecho-etiqueta">Coordina</div>
+    </div>
+  </div>
+</header>
+
+  
+  <p class="nota" style="margin:0 0 10px">
+    <a href="../pages/editar.html"><strong>Editar proyecto</strong></a>
+  </p>
+  
+
+  
+  <nav class="pestanas" aria-label="Secciones del proyecto">
+    
+    <a class="pestana" href="?seccion=resumen" aria-current="page">
+      Resumen
+    </a>
+    
+    <a class="pestana" href="?seccion=seguimiento">
+      Seguimiento
+    </a>
+    
+    <a class="pestana" href="?seccion=equipo">
+      Equipo<span class="cuenta">1</span>
+    </a>
+    
+    <a class="pestana" href="?seccion=contratos">
+      Contratos
+    </a>
+    
+    <a class="pestana" href="?seccion=hitos">
+      Hitos
+    </a>
+    
+    <a class="pestana" href="?seccion=etapas">
+      Etapas y tareas
+    </a>
+    
+    <a class="pestana" href="?seccion=historial">
+      Historial
+    </a>
+    
+  </nav>
+  
+  <p class="nota" style="margin:6px 0 16px">
+    <a href="?seccion=todas">Ver ficha completa</a> — para imprimir o copiar el proyecto entero.
+  </p>
+
+  
+
+<section class="panel" id="panel-resumen">
+  
+  <div class="tarjeta">
+    <h2>Descripción del proyecto</h2>
+    
+    <p class="texto-largo" style="margin:0">El proyecto contempla la actualización tecnológica del Sitio Web Institucional SAG desde Drupal 9 hacia Drupal 11, incluyendo la revisión y adaptación de módulos contribuidos, módulos personalizados, tema gráfico institucional, formularios, componentes de búsqueda e integraciones existentes. Adicionalmente considera la migración de CKEditor 4 a CKEditor 5, la ejecución de pruebas técnicas y funcionales, y la estabilización de la plataforma sobre una versión vigente y soportada.
+
+Como parte de la iniciativa se desarrollará un análisis de experiencia de usuario, navegación, contenidos y funcionalidades del portal, identificando oportunidades de mejora y generando un backlog priorizado para futuras evoluciones.
+
+El proyecto también incorpora la implementación de los principales requerimientos definidos por Gobierno Digital en materias de Arquitectura de Información, Responsividad Móvil, Diseño e Imagen Institucional y Seguridad, con el objetivo de mejorar la usabilidad, accesibilidad, experiencia digital y cumplimiento normativo del sitio institucional.
+
+Los principales beneficiarios corresponden a ciudadanos, productores, empresas, viajeros, profesionales y funcionarios que utilizan el sitio web del SAG para acceder a información, trámites y servicios digitales. Como resultado esperado, el SAG dispondrá de una plataforma web moderna, segura, mantenible y preparada para futuras mejoras evolutivas.</p>
+    
+  </div>
+  <div class="tarjeta">
+    
+    <div class="kpis">
+      <div class="kpi">
+        <div class="valor">80%</div>
+        <div class="etiqueta">Completitud del dato</div>
+      </div>
+    </div>
+    <dl>
+      <dt>Estado</dt><dd>En ejecución</dd>
+      
+      
+      <dt>Fecha de inicio</dt><dd>2026-10-26</dd>
+      
+      <dt>Fecha de término</dt><dd>2027-01-05</dd>
+      <dt>Término línea base</dt><dd>2027-01-05</dd>
+    </dl>
+    
+    <p class="faltante" style="margin-top:14px">
+      <strong>Falta por completar:</strong> Hitos de proyecto.
+    </p>
+    
+    
+    
+    <div style="margin-top:14px">
+      <div class="etiqueta-campo">Observación del coordinador</div>
+      <p style="margin:2px 0 0">Proyecto asignado para coordinación a Erick Fernández. La Orden de Compra se encuentra emitida y se debe coordinar el inicio de actividades con Blue Company S.A. Se considera seguimiento de avance, control de hitos, gestión de riesgos, coordinación con contrapartes SAG, validación de entregables y seguimiento de actividades de QA y paso a producción.</p>
+    </div>
+    
+  </div>
+
+  
+  <div class="tarjeta">
+    <h2>Seguimiento</h2>
+    
+    <p class="nota" style="margin:0">Sin reportar todavía. <a href="../pages/74.html">Ver seguimiento</a></p>
+    
+  </div>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</main>
+
+
+
+<a class="boton-sugerir" href="../pages/nueva.html" title="Sugerir una mejora de PMO-DTI">✎ Sugerir mejora</a>
+
+<script src="../scripts/pestanas.js" defer></script>
+
+</body></html>

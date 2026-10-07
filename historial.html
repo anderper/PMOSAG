@@ -1,0 +1,165 @@
+<html lang="es"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Historial · Actualización Tecnológica Drupal 9 a Drupal 11 para el Sitio Web SAG · PMO-DTI</title>
+  
+<script>
+(function () {
+  var guardado = localStorage.getItem('pmo-tema');
+  if (guardado === 'claro' || guardado === 'oscuro') {
+    document.documentElement.setAttribute('data-theme', guardado === 'oscuro' ? 'dark' : 'light');
+  }
+})();
+function pmoAlternarTema() {
+  var raiz = document.documentElement;
+  var oscuroDelSistema = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var actual = raiz.getAttribute('data-theme') || (oscuroDelSistema ? 'dark' : 'light');
+  var nuevo = actual === 'dark' ? 'light' : 'dark';
+  raiz.setAttribute('data-theme', nuevo);
+  localStorage.setItem('pmo-tema', nuevo === 'dark' ? 'oscuro' : 'claro');
+}
+</script>
+  <link rel="stylesheet" href="../styles/pmo.css">
+</head>
+<body class="pantalla-historial-proyecto">
+
+
+
+
+
+<div class="barra">
+  <div class="barra-interior">
+    <div class="barra-fila">
+      <span class="barra-marca">PMO-DTI · Portafolio de Proyectos TI</span>
+      <span class="barra-derecha">
+        
+        <span class="barra-quien">erick.fernandez@sag.gob.cl · Editor</span>
+        
+        <button type="button" class="barra-tema" onclick="pmoAlternarTema()" aria-label="Cambiar entre modo claro y oscuro" title="Cambiar entre modo claro y oscuro">◐</button>
+      </span>
+    </div>
+    <nav class="barra-menu">
+      <a href="/">Portafolio</a>
+      <a href="../pages/seguimiento.html">Seguimiento</a>
+      <a href="../pages/contratos.html">Contratos</a>
+      
+      
+      <a href="../pages/mi-dedicacion.html">Mi dedicación</a>
+      
+      
+      
+      
+    </nav>
+  </div>
+</div>
+<main class="contenedor">
+
+  <p class="nota" style="margin:0 0 10px"><a href="../pages/74.html">Ficha</a></p>
+  <h1>Historial de cambios</h1>
+  <p class="nota" style="margin:0 0 18px">Actualización Tecnológica Drupal 9 a Drupal 11 para el Sitio Web SAG</p>
+
+  
+<div class="tarjeta">
+  
+  <table>
+    <thead><tr><th>Fecha</th><th>Quién</th><th>Qué cambió</th><th>Antes</th><th>Después</th></tr></thead>
+    <tbody>
+    
+      <tr>
+        <td>06-10-2026 15:47</td>
+        <td>erick.fernandez@sag.gob.cl</td>
+        <td>Erick Fernández (Coordinador)</td>
+        <td class="antes">0.0%</td>
+        <td class="despues">20.0%</td>
+      </tr>
+    
+      <tr>
+        <td>06-10-2026 15:46</td>
+        <td>erick.fernandez@sag.gob.cl</td>
+        <td>Descripción del proyecto</td>
+        <td class="antes">—</td>
+        <td class="despues">El proyecto contempla la actualización tecnológica del Sitio Web Institucional SAG desde Drupal 9 hacia Drupal 11, incluyendo la revisión y adaptación de módulos contribuidos, módulos personalizados, tema gráfico institucional, formularios, componentes de búsqueda e integraciones existentes. Adicionalmente considera la migración de CKEditor 4 a CKEditor 5, la ejecución de pruebas técnicas y funcionales, y la estabilización de la plataforma sobre una versión vigente y soportada.
+
+Como parte de la iniciativa se desarrollará un análisis de experiencia de usuario, navegación, contenidos y funcionalidades del portal, identificando oportunidades de mejora y generando un backlog priorizado para futuras evoluciones.
+
+El proyecto también incorpora la implementación de los principales requerimientos definidos por Gobierno Digital en materias de Arquitectura de Información, Responsividad Móvil, Diseño e Imagen Institucional y Seguridad, con el objetivo de mejorar la usabilidad, accesibilidad, experiencia digital y cumplimiento normativo del sitio institucional.
+
+Los principales beneficiarios corresponden a ciudadanos, productores, empresas, viajeros, profesionales y funcionarios que utilizan el sitio web del SAG para acceder a información, trámites y servicios digitales. Como resultado esperado, el SAG dispondrá de una plataforma web moderna, segura, mantenible y preparada para futuras mejoras evolutivas.</td>
+      </tr>
+    
+      <tr>
+        <td>06-10-2026 15:46</td>
+        <td>erick.fernandez@sag.gob.cl</td>
+        <td>Propósito</td>
+        <td class="antes">—</td>
+        <td class="despues">Modernizar y asegurar la continuidad operativa del sitio web institucional del SAG mediante la actualización tecnológica desde Drupal 9 a Drupal 11, mejorando la seguridad, rendimiento, experiencia de usuario, administración de contenidos y cumplimiento de los lineamientos de Gobierno Digital</td>
+      </tr>
+    
+      <tr>
+        <td>06-10-2026 15:46</td>
+        <td>erick.fernandez@sag.gob.cl</td>
+        <td>Observación</td>
+        <td class="antes">—</td>
+        <td class="despues">Proyecto asignado para coordinación a Erick Fernández. La Orden de Compra se encuentra emitida y se debe coordinar el inicio de actividades con Blue Company S.A. Se considera seguimiento de avance, control de hitos, gestión de riesgos, coordinación con contrapartes SAG, validación de entregables y seguimiento de actividades de QA y paso a producción.</td>
+      </tr>
+    
+      <tr>
+        <td>06-10-2026 15:46</td>
+        <td>erick.fernandez@sag.gob.cl</td>
+        <td>Financiamiento</td>
+        <td class="antes">—</td>
+        <td class="despues">SAG</td>
+      </tr>
+    
+      <tr>
+        <td>06-10-2026 15:46</td>
+        <td>erick.fernandez@sag.gob.cl</td>
+        <td>Término de línea base</td>
+        <td class="antes">—</td>
+        <td class="despues">2027-01-05</td>
+      </tr>
+    
+      <tr>
+        <td>06-10-2026 15:46</td>
+        <td>erick.fernandez@sag.gob.cl</td>
+        <td>Fecha de término (plan)</td>
+        <td class="antes">—</td>
+        <td class="despues">2027-01-05</td>
+      </tr>
+    
+      <tr>
+        <td>06-10-2026 15:46</td>
+        <td>erick.fernandez@sag.gob.cl</td>
+        <td>Fecha de inicio (plan)</td>
+        <td class="antes">—</td>
+        <td class="despues">2026-10-26</td>
+      </tr>
+    
+      <tr>
+        <td>06-10-2026 15:12</td>
+        <td>erick.fernandez@sag.gob.cl</td>
+        <td>alta</td>
+        <td class="antes">—</td>
+        <td class="despues">Actualización Tecnológica Drupal 9 a Drupal 11 para el Sitio Web SAG</td>
+      </tr>
+    
+    </tbody>
+  </table>
+  
+</div>
+
+<p class="nota">
+  Este registro es append-only: no se edita ni se borra. Es lo que permite responder cuánto
+  se ha corrido un proyecto y quién lo movió — imposible con la planilla, que se sobrescribe
+  en cada versión.
+</p>
+
+</main>
+
+
+
+<a class="boton-sugerir" href="../pages/nueva.html" title="Sugerir una mejora de PMO-DTI">✎ Sugerir mejora</a>
+
+
+
+</body></html>

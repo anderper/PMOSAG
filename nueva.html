@@ -1,0 +1,178 @@
+<html lang="es"><head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Sugerencias de mejora · PMO-DTI</title>
+  
+<script>
+(function () {
+  var guardado = localStorage.getItem('pmo-tema');
+  if (guardado === 'claro' || guardado === 'oscuro') {
+    document.documentElement.setAttribute('data-theme', guardado === 'oscuro' ? 'dark' : 'light');
+  }
+})();
+function pmoAlternarTema() {
+  var raiz = document.documentElement;
+  var oscuroDelSistema = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  var actual = raiz.getAttribute('data-theme') || (oscuroDelSistema ? 'dark' : 'light');
+  var nuevo = actual === 'dark' ? 'light' : 'dark';
+  raiz.setAttribute('data-theme', nuevo);
+  localStorage.setItem('pmo-tema', nuevo === 'dark' ? 'oscuro' : 'claro');
+}
+</script>
+  <link rel="stylesheet" href="../styles/pmo.css">
+</head>
+<body class="pantalla-sugerencias">
+
+
+
+
+
+<div class="barra">
+  <div class="barra-interior">
+    <div class="barra-fila">
+      <span class="barra-marca">PMO-DTI · Portafolio de Proyectos TI</span>
+      <span class="barra-derecha">
+        
+        <span class="barra-quien">erick.fernandez@sag.gob.cl · Editor</span>
+        
+        <button type="button" class="barra-tema" onclick="pmoAlternarTema()" aria-label="Cambiar entre modo claro y oscuro" title="Cambiar entre modo claro y oscuro">◐</button>
+      </span>
+    </div>
+    <nav class="barra-menu">
+      <a href="/">Portafolio</a>
+      <a href="../pages/seguimiento.html">Seguimiento</a>
+      <a href="../pages/contratos.html">Contratos</a>
+      
+      
+      <a href="../pages/mi-dedicacion.html">Mi dedicación</a>
+      
+      
+      
+      
+    </nav>
+  </div>
+</div>
+<main class="contenedor">
+
+  <h1>Sugerencias de mejora</h1>
+  <p class="nota" style="margin:0 0 18px">
+    Sobre <strong>PMO-DTI</strong>, no sobre los proyectos del portafolio: qué le falta a
+    esta herramienta o qué estorba al usarla. Las ve todo el que puede editar, para que no
+    se pida dos veces lo mismo.
+  </p>
+
+  
+
+  <div class="tarjeta">
+    <h2>Nueva sugerencia</h2>
+    <form method="post" action="/sugerencias">
+      
+      <input type="hidden" name="desde" value="/proyecto/74/equipo">
+      
+      <p class="nota" style="margin:0 0 10px">
+        Sugerida desde <a href="../pages/equipo.html">/proyecto/74/equipo</a>.
+      </p>
+      
+      <div class="campo">
+        <label for="titulo">Qué debería mejorar</label>
+        <input type="text" name="titulo" id="titulo" maxlength="200" required placeholder="Filtrar el tablero por financiamiento">
+      </div>
+      <div class="campo" style="margin-top:12px">
+        <label for="detalle">Detalle (opcional)</label>
+        <textarea name="detalle" id="detalle" rows="3" maxlength="2000" placeholder="Para qué te sirve, o en qué momento lo echaste de menos."></textarea>
+      </div>
+      <button type="submit" style="margin-top:12px">Enviar sugerencia</button>
+    </form>
+  </div>
+
+  <div class="tarjeta">
+    <h2>4 sugerencia(s)</h2>
+    
+    <table>
+      <thead>
+        <tr><th>Sugerencia</th><th>Quién y cuándo</th><th>Estado</th></tr>
+      </thead>
+      <tbody>
+      
+        <tr>
+          <td>
+            <strong>Proveedor</strong>
+            <div class="nota" style="margin-top:4px">Como coordinador de proyecto no puedo colocar el nombre del Proveedor</div>
+            
+            <div class="nota" style="margin-top:4px">Desde <a href="../pages/6.html">/proyecto/6</a></div>
+            
+          </td>
+          <td class="nota">anderson.perdomo@sag.gob.cl<br>30-09-2026</td>
+          <td>
+            
+            <span class="etiqueta">Nueva</span>
+            
+            
+          </td>
+        </tr>
+      
+        <tr>
+          <td>
+            <strong>Calcular el porcentaje de avance</strong>
+            <div class="nota" style="margin-top:4px">En función a los hitos y tareas registradas, como de cada uno se indica el estado, podría calcular el porcentaje de avance del proyecto.</div>
+            
+            <div class="nota" style="margin-top:4px">Desde <a href="../pages/42.html">/proyecto/42</a></div>
+            
+          </td>
+          <td class="nota">marianella.diaz@sag.gob.cl<br>24-09-2026</td>
+          <td>
+            
+            <span class="etiqueta">Nueva</span>
+            
+            
+          </td>
+        </tr>
+      
+        <tr>
+          <td>
+            <strong>RESPONSABLE</strong>
+            <div class="nota" style="margin-top:4px">Al seleccionar responsable aparecen solo personas de TI debería haber un campo de U.U. ya que hay actividades como la elaboración de HUs que es responsabilidad del PO.</div>
+            
+            <div class="nota" style="margin-top:4px">Desde <a href="../pages/editar.html">/proyecto/6/tarea/197/editar</a></div>
+            
+          </td>
+          <td class="nota">anderson.perdomo@sag.gob.cl<br>23-09-2026</td>
+          <td>
+            
+            <span class="etiqueta ok">Implementada</span>
+            
+            
+          </td>
+        </tr>
+      
+        <tr>
+          <td>
+            <strong>Item DEPENDENCIA</strong>
+            <div class="nota" style="margin-top:4px">La dependencia...faltan campos elegibles, se puede colocar UNIDAD USUARIA, SECCIÓN DESARROLLO, INFRAESTRUCTURA, SOPORTE, EMPRESA DESARROLLADORA, GESTION, entre otro.</div>
+            
+            <div class="nota" style="margin-top:4px">Desde <a href="/">/</a></div>
+            
+          </td>
+          <td class="nota">anderson.perdomo@sag.gob.cl<br>23-09-2026</td>
+          <td>
+            
+            <span class="etiqueta ok">Implementada</span>
+            
+            
+          </td>
+        </tr>
+      
+      </tbody>
+    </table>
+    
+  </div>
+
+</main>
+
+
+
+<a class="boton-sugerir" href="../pages/nueva.html" title="Sugerir una mejora de PMO-DTI">✎ Sugerir mejora</a>
+
+
+
+</body></html>
